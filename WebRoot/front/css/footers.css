@@ -1,0 +1,32 @@
+.padding-zero{
+    padding: 0;
+}
+.padding-five{
+    padding: 5px;
+}
+.margin-zero{
+    margin: 0 auto;
+}
+.margin-zero-ten{
+    margin: 0 10px;
+}
+.border-zero{
+    border: 0;
+}
+
+/*脚注*/
+.panel-footer{
+    padding: 40px 15px;
+}
+.footer-autumn {
+    background-color: #f5f5f5;
+}
+
+.footer-autumn, .footer-autumn a {
+    color: #666;
+}
+.site-footer-links li{
+    list-style: none;
+    display: inline;
+    margin: 0 10px;
+}

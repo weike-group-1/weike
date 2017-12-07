@@ -1,0 +1,25 @@
+.padding-zero{
+    padding: 0;
+}
+.padding-five{
+    padding: 5px;
+}
+.margin-zero{
+    margin: 0 auto;
+}
+.margin-zero-ten{
+    margin: 0 10px;
+}
+.border-zero{
+    border: 0;
+}
+.clear{
+    overflow: hidden;
+    zoom: 0;
+}
+/*logo*/
+#logo{
+    width: 94.34px;
+    height: 36px;
+}
+
