@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>企业在线学习平台</title>
+    <title>登录</title>
     <link rel="stylesheet" href="../../bootstrap-3.3.7/dist/css/bootstrap.min.css">
     <script type="text/javascript" src="../../jquery/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="../../bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
@@ -10,15 +10,34 @@
     <script type="text/javascript" src="../../front/js/login.js"></script>
 </head>
 <body>
-<div class="panel panel-default">
+<div class="panel panel-default margin-zero">
     <div class="publicHead"></div><!--导入公共头部，勿动-->
-    <div class="panel-body">
+    <div class="panel-body" id="login">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xs-offset-2 col-xs-8">
-                    <!--自由设计部分start-->
-                    。。。。。。。。。。。。
-                    <!--自由设计部分end-->
+                <div class="panel panel-default col-xs-offset-7 col-xs-2" id="panelLogin">
+                    <div class="panel-body">
+                        <h3>登录</h3>
+                        <form id="formLogin">
+                            <div class="form-group">
+                                <label for="account">账号</label>
+                                <input type="account" class="form-control" id="account">
+                                请输入用户名/手机号/Email地址
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">密码</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">请输入密码
+                            </div>
+                            <button type="submit" class="btn btn-primary loginBtn">登录</button>
+                        </form>
+                        <div class="row others">
+                            <div class="col-md-7 col-md-offset-5 text-right">
+                                <a href="#">找回密码</a>
+                                <span> | </span>
+                                <a href="creater.html">立即注册</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -26,7 +45,4 @@
     <div class="publicFooter"></div><!--导入公共脚注，勿动-->
 </div>
 </body>
-<script>
-
-</script>
 </html>

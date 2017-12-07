@@ -2,26 +2,77 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>企业在线学习平台</title>
+    <title>注册</title>
     <link rel="stylesheet" href="../../bootstrap-3.3.7/dist/css/bootstrap.min.css">
     <script type="text/javascript" src="../../jquery/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="../../bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../../front/css/creater.css">
     <script type="text/javascript" src="../../front/js/creater.js"></script>
+    <link rel="stylesheet" href="../../front/css/register.css">
 </head>
 <body>
 <div class="panel panel-default">
     <div class="publicHead"></div><!--导入公共头部，勿动-->
-    <div class="panel-body">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-offset-2 col-xs-8">
+    <div class="panel-body" id="register">
                     <!--自由设计部分start-->
-                    。。。。。。。。。。。。
-                    <!--自由设计部分end-->
+                    <div id="content">
+                        <div class="row">
+                            <div class="panel panel-default col-md-4 col-md-offset-4" id="panelRe">
+                                <div class="panel-body">
+                                    <h3>快速注册</h3>
+                                    <div class="form-group">
+                                        <label for="username">登录名</label>
+                                        <input type="username" class="form-control" id="username">填写登录账号
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">邮箱</label>
+                                        <input type="email" class="form-control" id="email">发送通知信息时用，请一并提供
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">你的密码</label>
+                                        <input type="password" class="form-control" id="exampleInputPassword1">5-20位英文、数字、符号，区分大小写
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword2">确认密码</label>
+                                        <input type="password" class="form-control" id="exampleInputPassword2">再输入一次密码
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputNickName">姓名</label>
+                                        <input type="nickname" class="form-control" id="exampleInputNickName">该怎么称呼你？ 中、英文均可，最长16个英文或8个汉字
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPhone1">电话</label>
+                                        <input type="phone" class="form-control" id="exampleInputPhone1">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">您的性别</label>
+                                        <div class="controls">
+                                            <div class="radio-inline">
+                                                <label>
+                                                    <input type="radio" value="1" name="sex" checked="checked">先生
+                                                </label>
+                                            </div>
+                                            <div class="radio-inline">
+                                                <label>
+                                                    <input type="radio" value="0" name="sex">女士
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" id="s_register">
+                                        <div class="col-md-4">
+                                            <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-ok"></span>注册</button>
+                                        </div>
+                                        <div class="col-md-4 col-md-offset-4">
+                                            <p>已有帐号,请直接<a href="#">登录</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
+                    <!--自由设计部分end-->
     </div>
     <div class="publicFooter"></div><!--导入公共脚注，勿动-->
 </div>

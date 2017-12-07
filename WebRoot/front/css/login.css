@@ -1,1 +1,22 @@
 /*登录*/
+.panel{
+   padding: 0;
+    margin: 0;
+}
+#login{
+    background-image: url("../../image/login-bg-2.jpg");
+    height: 740px;
+}
+#panelLogin{
+
+    margin-top: 100px;
+}
+#formLogin{
+   margin-top: 15px;
+}
+.loginBtn{
+    width: 100%;
+}
+.others{
+    margin: 20px 0 20px 0;
+}

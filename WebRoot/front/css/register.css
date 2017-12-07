@@ -1,0 +1,18 @@
+#register{
+    margin: 0;
+    padding: 0;
+}
+/*#content{*/
+    /*background: #ececec;*/
+/*}*/
+#panelRe{
+    background: #ececec;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+#s_register{
+    margin-bottom: 20px;
+}
+#foot{
+    padding: 0;
+}
