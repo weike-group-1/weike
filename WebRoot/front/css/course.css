@@ -1,1 +1,10 @@
+/**/
+#content-container{
+    border: 1px solid silver;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
 /*课程*/
+.search-box{
+    position: relative;
+    top: 30px;
+}

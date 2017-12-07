@@ -18,6 +18,17 @@ function navSkip() {
         $("#navSkip li").removeClass("active");
         $("#navSkip li").eq($(this).index()).addClass("active");
     })
+        var loginAddress= $("#infoSkip li a").eq(0).attr("href");
+        var createrAddress= $("#infoSkip li a").eq(1).attr("href");
+        if(loginAddress==pageAddress){
+            $("#navSkip").addClass("hidden");
+            $("#infoSkip").addClass("hidden");
+            $("#loginSkip").removeClass("hidden");
+        }else if(createrAddress==pageAddress){
+            $("#navSkip").addClass("hidden");
+            $("#infoSkip").addClass("hidden");
+        }
+
 }
 /**
  * @return {string}
