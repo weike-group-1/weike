@@ -2,25 +2,169 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>企业在线学习平台</title>
+    <title>资讯</title>
     <link rel="stylesheet" href="../../bootstrap-3.3.7/dist/css/bootstrap.min.css">
     <script type="text/javascript" src="../../jquery/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="../../bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../../front/css/infoCenter.css">
     <script type="text/javascript" src="../../front/js/infoCenter.js"></script>
+    <link rel="stylesheet" href="../../font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 <div class="panel panel-default">
     <div class="publicHead"></div><!--导入公共头部，勿动-->
-    <div class="panel-body">
+    <div class="panel-body" id="content">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xs-offset-2 col-xs-8">
-                    <!--自由设计部分start-->
-                    。。。。。。。。。。。。
-                    <!--自由设计部分end-->
+                <div class="panel panel-default col-md-8 col-md-offset-2">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item active">
+                                        <i class="fa fa-bullhorn" aria-hidden="true"></i> 系统公告
+                                    </a>
+                                    <a href="#" class="list-group-item"> <i class="fa fa-bullhorn"
+                                                                            aria-hidden="true"></i> 课程公告</a>
+                                    <a href="#" class="list-group-item"><i class="glyphicon glyphicon-list"></i>
+                                        公司信息</a>
+                                    <a href="#" class="list-group-item"><i class="glyphicon glyphicon-list"></i>
+                                        部门信息</a>
+                                </div>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control">
+                                      <span class="input-group-btn">
+                                        <button class="btn btn-primary" type="button" id="searchBtn"><span class="glyphicon glyphicon-search"></span></button>
+                                      </span>
+                                        </div><!-- /input-group -->
+                                    </div>
+                                    <div class="panel-body" style="padding: 0;">
+                                        <div class="row" id="lineDown">
+                                            <div class="col-md-1"><span>标题</span></div>
+                                            <div class="col-md-2 col-md-offset-9"><span>发布时间</span></div>
+                                        </div>
+                                        <div class="list-group" style="margin-bottom: 0;">
+                                            <button type="button" class="list-group-item">
+                                                <div class="row">
+                                                    <div class="col-md-5"><a>课程开发不得不注意的一些地方，提升你的开发效率</a></div>
+                                                    <div class="col-md-2 col-md-offset-5"><span>2017-03-12</span></div>
+                                                </div>
+                                            </button>
+                                            <button type="button" class="list-group-item">
+                                                <div class="row">
+                                                    <div class="col-md-5"><a>scorm到底是做什么的？如何播放scorm课件？</a></div>
+                                                    <div class="col-md-2 col-md-offset-5"><span>2017-03-12</span></div>
+                                                </div>
+                                            </button>
+                                            <button type="button" class="list-group-item">
+                                                <div class="row">
+                                                    <div class="col-md-5"><a>测试一下系统公告</a></div>
+                                                    <div class="col-md-2 col-md-offset-5"><span>2017-03-12</span></div>
+                                                </div>
+                                            </button>
+                                            <button type="button" class="list-group-item">
+                                                <div class="row">
+                                                    <div class="col-md-5"><a>相比于传统教育，在线教育的好处很多</a></div>
+                                                    <div class="col-md-2 col-md-offset-5"><span>2017-03-12</span></div>
+                                                </div>
+                                            </button>
+                                            <button type="button" class="list-group-item">
+                                                <div class="row">
+                                                    <div class="col-md-5"><a>在线教育，一个新的教育发展行业</a></div>
+                                                    <div class="col-md-2 col-md-offset-5"><span>2017-03-12</span></div>
+                                                </div>
+                                            </button>
+                                            <button type="button" class="list-group-item">
+                                                <div class="row">
+                                                    <div class="col-md-5"><a>组织高效的学习活动是培训人追寻的目标</a></div>
+                                                    <div class="col-md-2 col-md-offset-5"><span>2017-03-12</span></div>
+                                                </div>
+                                            </button>
+                                            <button type="button" class="list-group-item">
+                                                <div class="row">
+                                                    <div class="col-md-5"><a>以满腔的热情和良好的师德做个好老师</a></div>
+                                                    <div class="col-md-2 col-md-offset-5"><span>2017-03-12</span></div>
+                                                </div>
+                                            </button>
+                                            <button type="button" class="list-group-item">
+                                                <div class="row">
+                                                    <div class="col-md-5"><a>分型pdf文档管理技巧，不得不学的技巧</a></div>
+                                                    <div class="col-md-2 col-md-offset-5"><span>2017-03-12</span></div>
+                                                </div>
+                                            </button>
+                                            <button type="button" class="list-group-item">
+                                                <div class="row">
+                                                    <div class="col-md-5"><a>五种常用的设计模型，设计模型游刃有余</a></div>
+                                                    <div class="col-md-2 col-md-offset-5"><span>2017-03-12</span></div>
+                                                </div>
+                                            </button>
+                                            <button type="button" class="list-group-item">
+                                                <div class="row">
+                                                    <div class="col-md-5"><a>如何制作scorm标准的网络课程？</a></div>
+                                                    <div class="col-md-2 col-md-offset-5"><span>2017-03-12</span></div>
+                                                </div>
+                                            </button>
+                                            <button type="button" class="list-group-item">
+                                                <div class="row">
+                                                    <div class="col-md-5"><a>国内做elearning课程一般都会用SCORM标准吗？</a></div>
+                                                    <div class="col-md-2 col-md-offset-5"><span>2017-03-12</span></div>
+                                                </div>
+                                            </button>
+                                            <button type="button" class="list-group-item">
+                                                <div class="row">
+                                                    <div class="col-md-5"><a>e-learing课件的现实与发展方向以及解决方案</a></div>
+                                                    <div class="col-md-2 col-md-offset-5"><span>2017-03-12</span></div>
+                                                </div>
+                                            </button>
+                                            <button type="button" class="list-group-item">
+                                                <div class="row">
+                                                    <div class="col-md-5"><a>学习对象(LO)与LMS交互实现</a></div>
+                                                    <div class="col-md-2 col-md-offset-5"><span>2017-03-12</span></div>
+                                                </div>
+                                            </button>
+                                            <button type="button" class="list-group-item">
+                                                <div class="row">
+                                                    <div class="col-md-5"><a>scorm的好处和原理</a></div>
+                                                    <div class="col-md-2 col-md-offset-5"><span>2017-03-12</span></div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <div class="row  sumLine">
+                                            <div class="col-md-3 col-md-offset-9"><span>记录总数：16</span></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <nav aria-label="Page navigation">
+                                                    <ul class="pagination">
+                                                        <li>
+                                                            <a href="#" aria-label="Previous">
+                                                                <span aria-hidden="true">&laquo;</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="active"><a href="#">1</a></li>
+                                                        <li><a href="#">2</a></li>
+                                                        <li>
+                                                            <a href="#" aria-label="Next">
+                                                                <span aria-hidden="true">&raquo;</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
         </div>
     </div>
     <div class="publicFooter"></div><!--导入公共脚注，勿动-->

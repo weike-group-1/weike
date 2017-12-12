@@ -1,12 +1,12 @@
 #register{
     margin: 0;
     padding: 0;
+    background: #ececec;
 }
 /*#content{*/
     /*background: #ececec;*/
 /*}*/
 #panelRe{
-    background: #ececec;
     margin-top: 15px;
     margin-bottom: 15px;
 }

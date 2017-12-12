@@ -8,7 +8,7 @@
     height: 740px;
 }
 #panelLogin{
-
+    opacity: 0.9;
     margin-top: 100px;
 }
 #formLogin{
