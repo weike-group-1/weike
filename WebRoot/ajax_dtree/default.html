@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>改进的Dtree</title>
+    <link rel="StyleSheet" href="dtree.css" type="text/css" />
+    <script type="text/javascript" src="dtree.js"></script>
+
+</head>
+<body>
+    <h1>
+        改进的Dtree</h1>
+    <h2>
+        Example</h2>
+    <div class="dtree">
+        <p>
+            <a href="javascript: a.openAll();">open all</a> | <a href="javascript: a.closeAll();">
+                close all</a></p>
+    </div>
+    <div id='dtree' class="dtree">
+
+        <script type="text/javascript">
+        a = new dTree('a','dtree');    
+        a.config.folderLinks=false;
+        a.config.closeSameLevel=true;        
+		a.add(0,-1,'My example tree');
+		a.add(1,0,'Node 1','example01.html');
+		a.add(2,0,'Node 2','example01.html');
+		a.add(3,1,'Node 1.1','example01.html');
+		a.add(4,0,'Node 3','example01.html');
+		a.add(5,3,'Node 1.1.1','example01.html');
+		a.add(6,5,'Node 1.1.1.1','example01.html');
+		a.add(7,0,'Node 4','example01.html');
+		a.add(8,1,'Node 1.2','example01.html');
+		a.add(9,0,'My Pictures','example01.html','Pictures I\'ve taken over the years','','','img/imgfolder.gif');
+		a.add(10,9,'The trip to Iceland','example01.html','Pictures of Gullfoss and Geysir');
+		a.add(11,9,'Mom\'s birthday','example01.html');
+		a.add(12,0,'Recycle Bin','example01.html','','','img/trash.gif');
+		a.draw();
+        
+        a.delegate=function (id)
+        {
+            alert(id);
+        }
+        
+        </script>
+
+    </div>
+    <a href="javascript:add();">add node test</a>
+    <a href="javascript:remove(12);">remove node test</a>
+
+    <script type="text/javascript">
+        function add() { 
+            a.add(13,9,'Node 15','javascript:void(0);',2343);
+            a.add(14,9,'Node 16','javascript:void(0);',2343); 
+            a.draw();
+        }
+        function remove(id){
+            a.remove(id);
+            a.draw();
+        }
+    </script>
+    <div id='new'>
+    </div>
+</body>
+</html>

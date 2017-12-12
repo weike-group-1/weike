@@ -8,6 +8,9 @@
     <script type="text/javascript" src="../../bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../../front/css/course.css">
     <script type="text/javascript" src="../../front/js/course.js"></script>
+
+    <link rel="StyleSheet" href="../../ajax_dtree/dtree-UTF-8.css" type="text/css"/>
+    <script type="text/javascript" src="../../ajax_dtree/dtree-UTF-8.js"></script>
 </head>
 <body>
 <div class="panel panel-default">
@@ -15,15 +18,15 @@
     <div class="panel-body">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xs-offset-2 col-xs-8">
+                <div class="col-md-offset-2 col-md-8">
                     <!--自由设计部分start-->
                     <div id="content-container" class="container">
                         <div class="row">
-                            <div class="col-xs-12">
+                            <div class="col-md-12">
                                 <div class="page-header clearfix">
                                     <h1 class="pull-left">课程</h1>
                                     <div class="row search-box">
-                                        <div class="col-xs-4 pull-right">
+                                        <div class="col-md-4 pull-right">
                                             <div class="btn-group" role="group" aria-label="...">
                                                 <button type="button" class="btn btn-default">全部</button>
                                                 <button type="button" class="btn btn-default">最新</button>
@@ -32,11 +35,12 @@
                                                 <button type="button" class="btn btn-default">岗位课程</button>
                                             </div>
                                         </div>
-                                        <div class="col-xs-4 pull-right">
+                                        <div class="col-md-4 pull-right">
                                             <div class="input-group">
                                                 <input type="text" class="form-control" placeholder="">
                                                 <span class="input-group-btn">
-                                                    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span>搜索</button>
+                                                    <button class="btn btn-default" type="button"><span
+                                                            class="glyphicon glyphicon-search"></span>搜索</button>
                                                 </span>
                                             </div><!-- /input-group -->
                                         </div>
@@ -45,12 +49,506 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-xs-2">
-                                <ul class="nav nav-pills nav-stacked">
-                                    <li role="presentation" class="active"><a href="#">Home<span class="badge">42</span></a></li>
-                                    <li role="presentation"><a href="#">Profile<span class="badge">42</span></a></li>
-                                    <li role="presentation"><a href="#">Messages<span class="badge">42</span></a></li>
+                            <div class="col-md-2">
+                                <ul class="nav nav-pills nav-stacked clearfix nav-course">
+                                    <li role="presentation" class="active"><a href="#">全部分类</a></li>
+                                    <li role="presentation"><a href="#">平台演示课程<span
+                                            class="badge pull-right">1</span></a></li>
+                                    <li role="presentation"><a href="#">操作系统<span class="badge pull-right">0</span></a>
+                                    </li>
+                                    <li role="presentation"><a href="#">WEB前端课程<span
+                                            class="badge pull-right">0</span></a></li>
+                                    <li role="presentation"><a href="#">保险业<span class="badge pull-right">0</span></a>
+                                    </li>
+                                    <li role="presentation"><a href="#">职业素质课程<span
+                                            class="badge pull-right">14</span></a></li>
+                                    <li role="presentation"><a href="#">操作系统<span class="badge pull-right">0</span></a>
+                                    </li>
+                                    <li role="presentation"><a href="#">数据处理<span class="badge pull-right">0</span></a>
+                                    </li>
+                                    <li role="presentation"><a href="#">测试<span class="badge pull-right">0</span></a>
+                                    </li>
+                                    <li role="presentation"><a href="#">demo课程2017<span
+                                            class="badge pull-right">0</span></a></li>
                                 </ul>
+                            </div>
+                            <div class="col-md-10 course-body">
+                                <div class="box-cate">
+                                    <div class="list-cate clearfix">
+                                        <div class="pull-left">&nbsp;0:&nbsp;</div>
+                                        <ul class="nav nav-pills pull-left nav-mini">
+                                            <li class="active"><a href="https:www.baidu.com">不限</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="course-number">
+                                    <ul class="nature-grids">
+                                        <!--课程标签-->
+                                        <li class=" nature-grid padding-zero">
+                                            <a class="course-image relative" title="JAVA入门指南">
+                                                <img src="../../image/course-image.jpg" title="JAVA入门指南">
+                                                <h4 class="margin-zero text-center">JAVA入门指南</h4>
+                                            </a>
+                                            <p>LMS企业版是专门为企业实施网络学习（e-Learning）而打造的网络培训和知...</p>
+                                        <span class="metas clearfix">
+                                            <span class="course-person clearfix">
+                                                <span class="glyphicon glyphicon-user pull-left" title="学习人数">60</span>
+                                                <span class="glyphicon pull-left">&nbsp;</span>
+                                                <span class="glyphicon glyphicon-heart pull-left " title="关注人数">60</span>
+                                            </span>
+                                            <span class="review-col">
+                                                <span class="review-rating">
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                </span>
+                                                <span class="meta-label">7&nbsp;评价</span>
+                                            </span>
+                                        </span>
+                                        <span class="teachers clearfix">
+                                            讲师：<span class="teacher"><a href="#" class="text-muted">李明</a></span>
+                                            <button type="button" class="btn btn-link btn-mini pull-right">简介</button>
+                                        </span>
+                                        </li>
+                                        <!--课程标签-->
+                                        <!--课程标签-->
+                                        <li class=" nature-grid padding-zero">
+                                            <a class="course-image relative" title="JAVA入门指南">
+                                                <img src="../../image/course-image.jpg" title="JAVA入门指南">
+                                                <h4 class="margin-zero text-center">JAVA入门指南</h4>
+                                            </a>
+                                            <p>LMS企业版是专门为企业实施网络学习（e-Learning）而打造的网络培训和知...</p>
+                                        <span class="metas clearfix">
+                                            <span class="course-person clearfix">
+                                                <span class="glyphicon glyphicon-user pull-left" title="学习人数">60</span>
+                                                <span class="glyphicon pull-left">&nbsp;</span>
+                                                <span class="glyphicon glyphicon-heart pull-left " title="关注人数">60</span>
+                                            </span>
+                                            <span class="review-col">
+                                                <span class="review-rating">
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                </span>
+                                                <span class="meta-label">7&nbsp;评价</span>
+                                            </span>
+                                        </span>
+                                        <span class="teachers clearfix">
+                                            讲师：<span class="teacher"><a href="#" class="text-muted">李明</a></span>
+                                            <button type="button" class="btn btn-link btn-mini pull-right">简介</button>
+                                        </span>
+                                        </li>
+                                        <!--课程标签-->
+                                        <!--课程标签-->
+                                        <li class=" nature-grid padding-zero">
+                                            <a class="course-image relative" title="JAVA入门指南">
+                                                <img src="../../image/course-image.jpg" title="JAVA入门指南">
+                                                <h4 class="margin-zero text-center">JAVA入门指南</h4>
+                                            </a>
+                                            <p>LMS企业版是专门为企业实施网络学习（e-Learning）而打造的网络培训和知...</p>
+                                        <span class="metas clearfix">
+                                            <span class="course-person clearfix">
+                                                <span class="glyphicon glyphicon-user pull-left" title="学习人数">60</span>
+                                                <span class="glyphicon pull-left">&nbsp;</span>
+                                                <span class="glyphicon glyphicon-heart pull-left " title="关注人数">60</span>
+                                            </span>
+                                            <span class="review-col">
+                                                <span class="review-rating">
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                </span>
+                                                <span class="meta-label">7&nbsp;评价</span>
+                                            </span>
+                                        </span>
+                                        <span class="teachers clearfix">
+                                            讲师：<span class="teacher"><a href="#" class="text-muted">李明</a></span>
+                                            <button type="button" class="btn btn-link btn-mini pull-right">简介</button>
+                                        </span>
+                                        </li>
+                                        <!--课程标签-->
+                                        <!--课程标签-->
+                                        <li class=" nature-grid padding-zero">
+                                            <a class="course-image relative" title="JAVA入门指南">
+                                                <img src="../../image/course-image.jpg" title="JAVA入门指南">
+                                                <h4 class="margin-zero text-center">JAVA入门指南</h4>
+                                            </a>
+                                            <p>LMS企业版是专门为企业实施网络学习（e-Learning）而打造的网络培训和知...</p>
+                                        <span class="metas clearfix">
+                                            <span class="course-person clearfix">
+                                                <span class="glyphicon glyphicon-user pull-left" title="学习人数">60</span>
+                                                <span class="glyphicon pull-left">&nbsp;</span>
+                                                <span class="glyphicon glyphicon-heart pull-left " title="关注人数">60</span>
+                                            </span>
+                                            <span class="review-col">
+                                                <span class="review-rating">
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                </span>
+                                                <span class="meta-label">7&nbsp;评价</span>
+                                            </span>
+                                        </span>
+                                        <span class="teachers clearfix">
+                                            讲师：<span class="teacher"><a href="#" class="text-muted">李明</a></span>
+                                            <button type="button" class="btn btn-link btn-mini pull-right">简介</button>
+                                        </span>
+                                        </li>
+                                        <!--课程标签-->
+                                        <!--课程标签-->
+                                        <li class="nature-grid padding-zero">
+                                            <a class="course-image relative" title="JAVA入门指南">
+                                                <img src="../../image/course-image.jpg" title="JAVA入门指南">
+                                                <h4 class="margin-zero text-center">JAVA入门指南</h4>
+                                            </a>
+                                            <p>LMS企业版是专门为企业实施网络学习（e-Learning）而打造的网络培训和知...</p>
+                                        <span class="metas clearfix">
+                                            <span class="course-person clearfix">
+                                                <span class="glyphicon glyphicon-user pull-left" title="学习人数">60</span>
+                                                <span class="glyphicon pull-left">&nbsp;</span>
+                                                <span class="glyphicon glyphicon-heart pull-left " title="关注人数">60</span>
+                                            </span>
+                                            <span class="review-col">
+                                                <span class="review-rating">
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                </span>
+                                                <span class="meta-label">7&nbsp;评价</span>
+                                            </span>
+                                        </span>
+                                        <span class="teachers clearfix">
+                                            讲师：<span class="teacher"><a href="#" class="text-muted">李明</a></span>
+                                            <button type="button" class="btn btn-link btn-mini pull-right">简介</button>
+                                        </span>
+                                        </li>
+                                        <!--课程标签-->
+                                        <!--课程标签-->
+                                        <li class=" nature-grid padding-zero">
+                                            <a class="course-image relative" title="JAVA入门指南">
+                                                <img src="../../image/course-image.jpg" title="JAVA入门指南">
+                                                <h4 class="margin-zero text-center">JAVA入门指南</h4>
+                                            </a>
+                                            <p>LMS企业版是专门为企业实施网络学习（e-Learning）而打造的网络培训和知...</p>
+                                        <span class="metas clearfix">
+                                            <span class="course-person clearfix">
+                                                <span class="glyphicon glyphicon-user pull-left" title="学习人数">60</span>
+                                                <span class="glyphicon pull-left">&nbsp;</span>
+                                                <span class="glyphicon glyphicon-heart pull-left " title="关注人数">60</span>
+                                            </span>
+                                            <span class="review-col">
+                                                <span class="review-rating">
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                </span>
+                                                <span class="meta-label">7&nbsp;评价</span>
+                                            </span>
+                                        </span>
+                                        <span class="teachers clearfix">
+                                            讲师：<span class="teacher"><a href="#" class="text-muted">李明</a></span>
+                                            <button type="button" class="btn btn-link btn-mini pull-right">简介</button>
+                                        </span>
+                                        </li>
+                                        <!--课程标签-->
+                                        <!--课程标签-->
+                                        <li class=" nature-grid padding-zero">
+                                            <a class="course-image relative" title="JAVA入门指南">
+                                                <img src="../../image/course-image.jpg" title="JAVA入门指南">
+                                                <h4 class="margin-zero text-center">JAVA入门指南</h4>
+                                            </a>
+                                            <p>LMS企业版是专门为企业实施网络学习（e-Learning）而打造的网络培训和知...</p>
+                                        <span class="metas clearfix">
+                                            <span class="course-person clearfix">
+                                                <span class="glyphicon glyphicon-user pull-left" title="学习人数">60</span>
+                                                <span class="glyphicon pull-left">&nbsp;</span>
+                                                <span class="glyphicon glyphicon-heart pull-left " title="关注人数">60</span>
+                                            </span>
+                                            <span class="review-col">
+                                                <span class="review-rating">
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                </span>
+                                                <span class="meta-label">7&nbsp;评价</span>
+                                            </span>
+                                        </span>
+                                        <span class="teachers clearfix">
+                                            讲师：<span class="teacher"><a href="#" class="text-muted">李明</a></span>
+                                            <button type="button" class="btn btn-link btn-mini pull-right">简介</button>
+                                        </span>
+                                        </li>
+                                        <!--课程标签-->
+                                        <!--课程标签-->
+                                        <li class=" nature-grid padding-zero">
+                                            <a class="course-image relative" title="JAVA入门指南">
+                                                <img src="../../image/course-image.jpg" title="JAVA入门指南">
+                                                <h4 class="margin-zero text-center">JAVA入门指南</h4>
+                                            </a>
+                                            <p>LMS企业版是专门为企业实施网络学习（e-Learning）而打造的网络培训和知...</p>
+                                        <span class="metas clearfix">
+                                            <span class="course-person clearfix">
+                                                <span class="glyphicon glyphicon-user pull-left" title="学习人数">60</span>
+                                                <span class="glyphicon pull-left">&nbsp;</span>
+                                                <span class="glyphicon glyphicon-heart pull-left " title="关注人数">60</span>
+                                            </span>
+                                            <span class="review-col">
+                                                <span class="review-rating">
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                </span>
+                                                <span class="meta-label">7&nbsp;评价</span>
+                                            </span>
+                                        </span>
+                                        <span class="teachers clearfix">
+                                            讲师：<span class="teacher"><a href="#" class="text-muted">李明</a></span>
+                                            <button type="button" class="btn btn-link btn-mini pull-right">简介</button>
+                                        </span>
+                                        </li>
+                                        <!--课程标签-->
+                                        <!--课程标签-->
+                                        <li class=" nature-grid padding-zero">
+                                            <a class="course-image relative" title="JAVA入门指南">
+                                                <img src="../../image/course-image.jpg" title="JAVA入门指南">
+                                                <h4 class="margin-zero text-center">JAVA入门指南</h4>
+                                            </a>
+                                            <p>LMS企业版是专门为企业实施网络学习（e-Learning）而打造的网络培训和知...</p>
+                                        <span class="metas clearfix">
+                                            <span class="course-person clearfix">
+                                                <span class="glyphicon glyphicon-user pull-left" title="学习人数">60</span>
+                                                <span class="glyphicon pull-left">&nbsp;</span>
+                                                <span class="glyphicon glyphicon-heart pull-left " title="关注人数">60</span>
+                                            </span>
+                                            <span class="review-col">
+                                                <span class="review-rating">
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                </span>
+                                                <span class="meta-label">7&nbsp;评价</span>
+                                            </span>
+                                        </span>
+                                        <span class="teachers clearfix">
+                                            讲师：<span class="teacher"><a href="#" class="text-muted">李明</a></span>
+                                            <button type="button" class="btn btn-link btn-mini pull-right">简介</button>
+                                        </span>
+                                        </li>
+                                        <!--课程标签-->
+                                        <!--课程标签-->
+                                        <li class=" nature-grid padding-zero">
+                                            <a class="course-image relative" title="JAVA入门指南">
+                                                <img src="../../image/course-image.jpg" title="JAVA入门指南">
+                                                <h4 class="margin-zero text-center">JAVA入门指南</h4>
+                                            </a>
+                                            <p>LMS企业版是专门为企业实施网络学习（e-Learning）而打造的网络培训和知...</p>
+                                        <span class="metas clearfix">
+                                            <span class="course-person clearfix">
+                                                <span class="glyphicon glyphicon-user pull-left" title="学习人数">60</span>
+                                                <span class="glyphicon pull-left">&nbsp;</span>
+                                                <span class="glyphicon glyphicon-heart pull-left " title="关注人数">60</span>
+                                            </span>
+                                            <span class="review-col">
+                                                <span class="review-rating">
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                </span>
+                                                <span class="meta-label">7&nbsp;评价</span>
+                                            </span>
+                                        </span>
+                                        <span class="teachers clearfix">
+                                            讲师：<span class="teacher"><a href="#" class="text-muted">李明</a></span>
+                                            <button type="button" class="btn btn-link btn-mini pull-right">简介</button>
+                                        </span>
+                                        </li>
+                                        <!--课程标签-->
+                                        <!--课程标签-->
+                                        <li class=" nature-grid padding-zero">
+                                            <a class="course-image relative" title="JAVA入门指南">
+                                                <img src="../../image/course-image.jpg" title="JAVA入门指南">
+                                                <h4 class="margin-zero text-center">JAVA入门指南</h4>
+                                            </a>
+                                            <p>LMS企业版是专门为企业实施网络学习（e-Learning）而打造的网络培训和知...</p>
+                                        <span class="metas clearfix">
+                                            <span class="course-person clearfix">
+                                                <span class="glyphicon glyphicon-user pull-left" title="学习人数">60</span>
+                                                <span class="glyphicon pull-left">&nbsp;</span>
+                                                <span class="glyphicon glyphicon-heart pull-left " title="关注人数">60</span>
+                                            </span>
+                                            <span class="review-col">
+                                                <span class="review-rating">
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                </span>
+                                                <span class="meta-label">7&nbsp;评价</span>
+                                            </span>
+                                        </span>
+                                        <span class="teachers clearfix">
+                                            讲师：<span class="teacher"><a href="#" class="text-muted">李明</a></span>
+                                            <button type="button" class="btn btn-link btn-mini pull-right">简介</button>
+                                        </span>
+                                        </li>
+                                        <!--课程标签-->
+                                        <!--课程标签-->
+                                        <li class=" nature-grid padding-zero">
+                                            <a class="course-image relative" title="JAVA入门指南">
+                                                <img src="../../image/course-image.jpg" title="JAVA入门指南">
+                                                <h4 class="margin-zero text-center">JAVA入门指南</h4>
+                                            </a>
+                                            <p>LMS企业版是专门为企业实施网络学习（e-Learning）而打造的网络培训和知...</p>
+                                        <span class="metas clearfix">
+                                            <span class="course-person clearfix">
+                                                <span class="glyphicon glyphicon-user pull-left" title="学习人数">60</span>
+                                                <span class="glyphicon pull-left">&nbsp;</span>
+                                                <span class="glyphicon glyphicon-heart pull-left " title="关注人数">60</span>
+                                            </span>
+                                            <span class="review-col">
+                                                <span class="review-rating">
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                </span>
+                                                <span class="meta-label">7&nbsp;评价</span>
+                                            </span>
+                                        </span>
+                                        <span class="teachers clearfix">
+                                            讲师：<span class="teacher"><a href="#" class="text-muted">李明</a></span>
+                                            <button type="button" class="btn btn-link btn-mini pull-right">简介</button>
+                                        </span>
+                                        </li>
+                                        <!--课程标签-->
+                                        <!--课程标签-->
+                                        <li class=" nature-grid padding-zero">
+                                            <a class="course-image relative" title="JAVA入门指南">
+                                                <img src="../../image/course-image.jpg" title="JAVA入门指南">
+                                                <h4 class="margin-zero text-center">JAVA入门指南</h4>
+                                            </a>
+                                            <p>LMS企业版是专门为企业实施网络学习（e-Learning）而打造的网络培训和知...</p>
+                                        <span class="metas clearfix">
+                                            <span class="course-person clearfix">
+                                                <span class="glyphicon glyphicon-user pull-left" title="学习人数">60</span>
+                                                <span class="glyphicon pull-left">&nbsp;</span>
+                                                <span class="glyphicon glyphicon-heart pull-left " title="关注人数">60</span>
+                                            </span>
+                                            <span class="review-col">
+                                                <span class="review-rating">
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                </span>
+                                                <span class="meta-label">7&nbsp;评价</span>
+                                            </span>
+                                        </span>
+                                        <span class="teachers clearfix">
+                                            讲师：<span class="teacher"><a href="#" class="text-muted">李明</a></span>
+                                            <button type="button" class="btn btn-link btn-mini pull-right">简介</button>
+                                        </span>
+                                        </li>
+                                        <!--课程标签-->
+                                        <!--课程标签-->
+                                        <li class=" nature-grid padding-zero">
+                                            <a class="course-image relative" title="JAVA入门指南">
+                                                <img src="../../image/course-image.jpg" title="JAVA入门指南">
+                                                <h4 class="margin-zero text-center">JAVA入门指南</h4>
+                                            </a>
+                                            <p>LMS企业版是专门为企业实施网络学习（e-Learning）而打造的网络培训和知...</p>
+                                        <span class="metas clearfix">
+                                            <span class="course-person clearfix">
+                                                <span class="glyphicon glyphicon-user pull-left" title="学习人数">60</span>
+                                                <span class="glyphicon pull-left">&nbsp;</span>
+                                                <span class="glyphicon glyphicon-heart pull-left " title="关注人数">60</span>
+                                            </span>
+                                            <span class="review-col">
+                                                <span class="review-rating">
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                </span>
+                                                <span class="meta-label">7&nbsp;评价</span>
+                                            </span>
+                                        </span>
+                                        <span class="teachers clearfix">
+                                            讲师：<span class="teacher"><a href="#" class="text-muted">李明</a></span>
+                                            <button type="button" class="btn btn-link btn-mini pull-right">简介</button>
+                                        </span>
+                                        </li>
+                                        <!--课程标签-->
+                                        <!--课程标签-->
+                                        <li class=" nature-grid padding-zero">
+                                            <a class="course-image relative" title="JAVA入门指南">
+                                                <img src="../../image/course-image.jpg" title="JAVA入门指南">
+                                                <h4 class="margin-zero text-center">JAVA入门指南</h4>
+                                            </a>
+                                            <p>LMS企业版是专门为企业实施网络学习（e-Learning）而打造的网络培训和知...</p>
+                                        <span class="metas clearfix">
+                                            <span class="course-person clearfix">
+                                                <span class="glyphicon glyphicon-user pull-left" title="学习人数">60</span>
+                                                <span class="glyphicon pull-left">&nbsp;</span>
+                                                <span class="glyphicon glyphicon-heart pull-left " title="关注人数">60</span>
+                                            </span>
+                                            <span class="review-col">
+                                                <span class="review-rating">
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                </span>
+                                                <span class="meta-label">7&nbsp;评价</span>
+                                            </span>
+                                        </span>
+                                        <span class="teachers clearfix">
+                                            讲师：<span class="teacher"><a href="#" class="text-muted">李明</a></span>
+                                            <button type="button" class="btn btn-link btn-mini pull-right">简介</button>
+                                        </span>
+                                        </li>
+                                        <!--课程标签-->
+
+                                    </ul>
+                                </div>
+                                <div class="text-center pageBreak">
+                                <nav aria-label="...">
+                                    <ul class="pagination">
+                                        <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                                        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                                    </ul>
+                                </nav>
+                                </div>
                             </div>
                         </div>
                     </div>

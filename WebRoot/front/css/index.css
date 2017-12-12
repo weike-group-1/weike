@@ -29,10 +29,17 @@
 .relative {
     position: relative;
 }
+body{
+    min-width: 380px;
+}
 
 /*轮播图图片样式*/
 .item > img {
     width: 100%;
+    min-width: 256px;
+}
+#carousel-example-generic{
+    min-width: 256px;
 }
 
 /*a标签样式*/
@@ -44,6 +51,9 @@
     color: #000;
 }
 /*每行移入阴影*/
+.body-index{
+    min-width: 320px;
+}
 .body-index:hover {
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
 }
@@ -63,6 +73,10 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
+.course-image{
+    display: block;
+}
+
 /*课程图片样式*/
 .course-image img {
     max-width: 234px;
@@ -76,7 +90,7 @@
     opacity: 0.7;
     position: absolute;
     top: 160px;;
-    width: 96.5%;
+    width: 100%;
 }
 
 /*课程内容范式*/

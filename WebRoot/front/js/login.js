@@ -12,11 +12,6 @@ function publicHeadAndFooter(){
     $(".publicHead").load("heads.html");
     $(".publicFooter").load("footers.html");
 }
-/*调用时设置公共样式*/
-// function settingHeadAndFooter(){
-//     $("#navSkip").addClass("hidden");
-//     $("#infoSkip").addClass("hidden");
-//     $("#loginSkip").removeClass("hidden");
-// }
+
 
 

@@ -1,10 +1,183 @@
+.padding-zero {
+    padding: 0px;
+}
+
+.padding-five {
+    padding: 5px;
+}
+
+.margin-zero {
+    margin: 0 auto;
+}
+
+.margin-zero-ten {
+    margin: 0 10px;
+}
+
+.margin-bottom-twenty {
+    margin-bottom: 20px;
+}
+
+.border-zero {
+    border: 0;
+}
+
+.inline {
+    display: inline;
+}
+
+.relative {
+    position: relative;
+}
 /**/
 #content-container{
     border: 1px solid silver;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    min-width: 256px;
 }
 /*课程*/
 .search-box{
     position: relative;
     top: 30px;
+}
+/*课程导航*/
+.nav-course{
+    min-width: 165px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+/**/
+.box-cate {
+    padding: 10px;
+    border: 1px solid #D5D5D5;
+    box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 5px;
+    border-radius: 5px;
+    margin: 5px 70px 0 0;
+    min-width: 240px;
+
+}
+/*右上导航条*/
+.box-cate .list-cate {
+    padding: 4px 2px 10px 4px;
+    background: #fff;
+    border-bottom: 0px solid #0ae;
+    border-radius: 5px;
+}
+ .list-cate .nav-mini li a{
+    padding:  4px;
+    font-size: 12px;
+}
+/*右边主体*/
+.course-body{
+    padding: 0 30px 15px 15px;
+}
+
+.nature-grids{
+    padding: 0 ;
+}
+/*课程列表行*/
+.nature-grid {
+    max-width: 242px;
+    border-radius: 8px;
+    max-height: 305px;
+    border: 1px solid silver;
+    padding: 4px;
+    list-style: none;
+    float: left;
+    margin: 0 70px 15px 0;
+}
+
+.nature-grid:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.course-image{
+    display: block;
+}
+
+/*课程图片样式*/
+.course-image img {
+    max-width: 234px;
+    max-height: 175px;
+}
+
+/*课程标题样式*/
+.course-image h4 {
+    color: white;
+    background: black;
+    opacity: 0.7;
+    position: absolute;
+    top: 160px;;
+    width: 100%;
+}
+
+/*课程内容范式*/
+.nature-grid p {
+    overflow: hidden;
+    line-height: 20px;
+    min-height: 50px;
+    font-size: 12px;
+    color: silver;
+    padding: 7px 0 6px 2px;
+    margin-bottom: 1px;
+}
+
+/*课程讲师及评价行*/
+.metas {
+    border-top: 1px solid #eee;
+    color: #9b9b9b;
+    display: block;
+    font-size: 12px;
+    line-height: 1.2px;
+    margin: 0 1px;
+    overflow: hidden;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.course-person {
+    color: #b7b7b7;
+    float: left;
+    padding: 7px 10px 6px 7px;
+    width: auto;
+}
+.review-col{
+    float: right;
+    padding: 7px 0 6px 7px;
+}
+
+.teachers {
+    display: block;
+    margin: 0 1px 1px;
+    padding-top: 5px;
+    color: #999;
+}
+
+.teacher {
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    margin-bottom: 1px;
+    overflow: hidden;
+    padding-bottom: 1px;
+    padding-left: 1px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: auto;
+}
+.text-muted {
+    color: #777;
+    text-decoration:none;
+}
+.text-muted:hover{
+    color: #4ac815;
+    text-decoration:none;
+}
+.teachers .btn-mini{
+    padding: 2px 8px;
+    font-size: 12px;
+}
+
+/*分页跳转*/
+.pageBreak{
+    margin: 5px 70px 0 0;
 }
