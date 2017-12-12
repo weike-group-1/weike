@@ -8,6 +8,7 @@
     <script type="text/javascript" src="../../bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../../front/css/fileCenter.css">
     <script type="text/javascript" src="../../front/js/fileCenter.js"></script>
+    <script type="text/javascript" src="../../front/js/dtree-UTF-8.js"></script>
 </head>
 <body>
 <div class="panel panel-default">
@@ -17,7 +18,30 @@
             <div class="row">
                 <div class="col-md-offset-2 col-md-8">
                     <!--自由设计部分start-->
+                    <div id="flie-container" class="container">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <!--搜索栏start-->
+                                <div class="well well-sm">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search for...">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default" type="button">Go!</button>
+                                        </span>
+                                    </div><!-- /input-group -->
+                                </div>
+                                <!--搜索栏end-->
+                                <!--分享start-->
+                                <button type="button" class="btn btn-primary btn-block">我要分享</button>
+                                <!--分享end-->
+                                <!--树型结构start-->
+                                <div id='dtree' class="dtree">
 
+                                </div>
+                                <!--树型结构end-->
+                            </div>
+                        </div>
+                    </div>
                     <!--自由设计部分end-->
                 </div>
             </div>

@@ -27,30 +27,58 @@
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                 </button>
-                                <a class="navbar-brand padding-five margin-zero-ten" href="/WebRoot/front/html/index.html" >
+                                <a class="navbar-brand padding-five margin-zero-ten"
+                                   href="../../front/html/index.html">
                                     <img src="../../image/logo.png" id="logo">
                                 </a>
                             </div>
 
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <!--左边导航栏-->
                                 <ul class="nav navbar-nav" id="navSkip">
-                                    <li class="active"><a href="/WebRoot/front/html/index.html">首页</a></li>
-                                    <li><a href="/WebRoot/front/html/course.html">课程</a></li>
-                                    <li><a href="/WebRoot/front/html/plan.html">计划</a></li>
-                                    <li><a href="/WebRoot/front/html/train.html">培训</a></li>
-                                    <li><a href="/WebRoot/front/html/fileCenter.html">知识</a></li>
-                                    <li><a href="/WebRoot/front/html/tutor.html">讲师</a></li>
-                                    <li><a href="/WebRoot/front/html/infoCenter.html">资讯</a></li>
+                                    <li class="active"><a href="../../front/html/index.html">首页</a></li>
+                                    <li><a href="../../front/html/course.html">课程</a></li>
+                                    <li><a href="../../front/html/plan.html">计划</a></li>
+                                    <li><a href="../../front/html/train.html">培训</a></li>
+                                    <li><a href="../../front/html/fileCenter.html">知识</a></li>
+                                    <li><a href="../../front/html/tutor.html">讲师</a></li>
+                                    <li><a href="../../front/html/infoCenter.html">资讯</a></li>
                                 </ul>
-                                <ul class="nav navbar-nav navbar-right" id="infoSkip">
-                                    <li><a href="/WebRoot/front/html/login.html">登录</a></li>
-                                    <li><a href="/WebRoot/front/html/creater.html">注册</a></li>
+                                <!--登录注册-->
+                                <ul class="nav navbar-nav navbar-right " id="loginSkip">
+                                    <li><a href="../../front/html/login.html">登录</a></li>
+                                    <li><a href="../../front/html/creater.html">注册</a></li>
                                 </ul>
-                                <ul class="nav navbar-nav navbar-right hidden" id="loginSkip">
-                                    <li><img src="/WebRoot/image/code.png">
-                                    <strong>扫一扫下载客户端</strong></li>
+                                <!--扫描客户端-->
+                                <ul class="nav navbar-nav navbar-right hidden" id="scanSkip">
+                                    <li><img src="../../image/code.png">
+                                        <strong>扫一扫下载客户端</strong></li>
                                 </ul>
+                                <!--用户信息-->
+                                <ul class="nav navbar-nav navbar-right hidden" id="infoSkip">
+                                    <li><a href="#">我的课堂</a></li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" id="dropdown-stu">
+                                            <img src="../../image/user-head.jpg" id="user-head">
+                                            普通学员
+                                            <span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider" aria-labelledby="dropdown-stu">
+                                            <li><a href="#">个人中心</a></li>
+                                            <li><a href="#">账号设置</a></li>
+                                            <li role="separator" class="divider"></li>
+                                            <li><a href="#">注销</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#"><span class="glyphicon glyphicon-bullhorn"></span>
+                                            <span class="badge">4</span></a>
+                                    </li>
+                                    <li><a href="#"><span class="glyphicon glyphicon-envelope"></span>
+                                        <span class="badge">10</span></a>
+                                    </li>
+                                </ul>
+                                <!--用户信息-->
                             </div><!-- /.navbar-collapse -->
                         </div><!-- /.container-fluid -->
                     </nav>

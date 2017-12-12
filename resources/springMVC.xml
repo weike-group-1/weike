@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	  http://www.springframework.org/schema/beans/spring-beans.xsd
+	  http://www.springframework.org/schema/context
+	  http://www.springframework.org/schema/context/spring-context.xsd
+	  http://www.springframework.org/schema/mvc
+	  http://www.springframework.org/schema/mvc/spring-mvc.xsd
+	  http://www.springframework.org/schema/util
+	  http://www.springframework.org/schema/util/spring-util.xsd">
+	<!-- 视图处理器 -->
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix">
+			<value>/WEB-INF/</value>
+		</property>
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+	</bean>
+
+	<bean id="conversionService"
+		class="org.springframework.format.support.FormattingConversionServiceFactoryBean"></bean>
+	<bean
+		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+	</bean>
+
+	<!-- 自动扫描@Controller标注的控制器类所在包 -->
+	<context:component-scan base-package="cn.ucai.weike.controller" />
+
+	<!-- 处理静态资源 -->
+	<mvc:default-servlet-handler />
+	
+	
+	<!--配置json数据转换器 -->
+	<mvc:annotation-driven conversion-service="conversionService">
+	     <mvc:message-converters>
+	     	<!-- String类型由它转换 -->
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+            	<!-- 配置字符集，解决中文乱码问题(原因是http协议默认的传输编码是ISO8850-1) -->
+            	<constructor-arg value="UTF-8"></constructor-arg>
+            </bean>
+            <!-- 其他类型转换器 -->
+            <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>
+	   </mvc:message-converters>
+	</mvc:annotation-driven>
+	
+	
+	<!-- 配置文件上传 -->
+	<!-- <bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="defaultEncoding" value="utf-8" />
+		<property name="maxUploadSize" value="1048576" />
+		<property name="maxInMemorySize" value="40960" />
+		配置延迟解析，以便处理异常.
+		<property name="resolveLazily" value="true" />
+	</bean> -->
+	
+</beans>
