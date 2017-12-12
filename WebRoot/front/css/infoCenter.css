@@ -1,1 +1,20 @@
 /*资讯*/
+#content{
+    background: #ececec;
+    padding: 20px;
+}
+#searchBtn{
+    padding: 6px 25px;
+}
+#lineDown{
+    padding: 15px 15px 0 15px;
+}
+.sumLine{
+    text-align: right;
+    padding: 20px 10px 20px 0;
+    font-weight: bold;
+}
+.pagination{
+    margin: 0 20px 15px 0;
+    border-radius: 8px;
+}
