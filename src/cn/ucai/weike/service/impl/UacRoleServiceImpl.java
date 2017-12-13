@@ -82,8 +82,8 @@ public class UacRoleServiceImpl implements UacRoleService {
 
 	@Override
 	public Result getAllEntityByPage(Integer pageNo, Integer pageSize,
-			Object obj) {
-		UacRole role = (UacRole) obj;
+			Object... objs) {
+		UacRole role = (UacRole) objs[0];
 
 		Result result = new Result();
 		result.setRetCode(1001);

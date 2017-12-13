@@ -20,7 +20,7 @@ public class UserController {
 	@RequestMapping("/getCount")
 	@ResponseBody
 	public Result getCount() {
-		Result result = userService.getUserCount();
+		Result result = userService.getEntityCount();
 		System.out.println(result);
 		return result;
 	}
@@ -28,7 +28,7 @@ public class UserController {
 	@RequestMapping("/doAdd")
 	@ResponseBody
 	public Result doAdd(UacUser user) {
-		Result result = userService.addUser(user);
+		Result result = userService.addEntity(user);
 		System.out.println(result);
 		return result;
 	}
@@ -36,7 +36,7 @@ public class UserController {
 	@RequestMapping("/doDelete")
 	@ResponseBody
 	public Result doDelete(UacUser user) {
-		Result result = userService.deleteUser(user);
+		Result result = userService.deleteEntity(user);
 		System.out.println(result);
 		return result;
 	}
@@ -44,7 +44,7 @@ public class UserController {
 	@RequestMapping("/doUpdate")
 	@ResponseBody
 	public Result doUpdate(UacUser user) {
-		Result result = userService.updateUser(user);
+		Result result = userService.updateEntity(user);
 		System.out.println(result);
 		return result;
 	}
@@ -53,7 +53,7 @@ public class UserController {
 	@ResponseBody
 	public Result getAllByPage(Integer pageNo, Integer pageSize,
 			UacUser user) {
-		Result result = userService.getAllUserByPage(pageNo, pageSize, user);
+		Result result = userService.getAllEntityByPage(pageNo, pageSize, user);
 		System.out.println(result);
 		return result;
 	}
@@ -61,7 +61,7 @@ public class UserController {
 	@RequestMapping("/doGet")
 	@ResponseBody
 	public Result doGet(UacUser user){
-		Result result=userService.getUser(user.getId());
+		Result result=userService.getEntity(user.getId());
 		System.out.println(result);
 		return result;	
 	}

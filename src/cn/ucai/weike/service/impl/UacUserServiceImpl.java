@@ -21,7 +21,7 @@ public class UacUserServiceImpl implements UacUserService {
 
 	@Override
 	@Transactional
-	public Result addUser(UacUser t) {
+	public Result addEntity(UacUser t) {
 		Result result = new Result();
 		if (t.getAccount() != null && t.getPassword() != null
 				&& t.getEmail() != null) {
@@ -40,7 +40,7 @@ public class UacUserServiceImpl implements UacUserService {
 
 	@Override
 	@Transactional
-	public Result deleteUser(UacUser t) {
+	public Result deleteEntity(UacUser t) {
 		// TODO Auto-generated method stub
 		Result result = new Result();
 		t = userDao.getEntity(UacUser.class, t.getId());
@@ -58,7 +58,7 @@ public class UacUserServiceImpl implements UacUserService {
 
 	@Override
 	@Transactional
-	public Result updateUser(UacUser t) {
+	public Result updateEntity(UacUser t) {
 		Result result = new Result();
 		if(t!=null){
 			userDao.saveOrUpdateEntity(t);;
@@ -74,7 +74,7 @@ public class UacUserServiceImpl implements UacUserService {
 	}
 
 	@Override
-	public Result getUser(Serializable id) {
+	public Result getEntity(Serializable id) {
 		Result result = new Result();
 		result.setRetCode(1001);
 		result.setRetMsg(false);
@@ -88,8 +88,9 @@ public class UacUserServiceImpl implements UacUserService {
 	}
 
 	@Override
-	public Result getAllUserByPage(Integer pageNo, Integer pageSize,
-			UacUser user) {
+	public Result getAllEntityByPage(Integer pageNo, Integer pageSize,
+			Object...objs) {
+		UacUser user=(UacUser)objs[0];
 		Result result = new Result();
 		result.setRetCode(1001);
 		result.setRetMsg(false);
@@ -119,7 +120,7 @@ public class UacUserServiceImpl implements UacUserService {
 	}
 
 	@Override
-	public Result getUserCount() {
+	public Result getEntityCount() {
 		Result result = new Result();
 		result.setRetCode(1001);
 		result.setRetMsg(false);
