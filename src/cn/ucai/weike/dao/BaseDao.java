@@ -25,5 +25,8 @@ public interface BaseDao<T> {
 	
 	//根据条件，页码，查询长度查找数据列表
 	List<T> getPageListByCondition(String hql,Integer pageNo,Integer pageSize,Object...objects);
+	
+	//查询表总数
+	Integer getCount(String hql);
 
 }

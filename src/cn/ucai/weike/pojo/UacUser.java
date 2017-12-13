@@ -33,7 +33,7 @@ public class UacUser implements java.io.Serializable {
 	private Integer gender;
 	private Timestamp regTime;
 	private Integer userType;
-	private Set<SysComNews> sysComNewses = new HashSet<SysComNews>(0);
+	/*private Set<SysComNews> sysComNewses = new HashSet<SysComNews>(0);
 	private Set<CurCourseinfor> curCourseinforsForCurMgrId = new HashSet<CurCourseinfor>(
 			0);
 	private Set<CurUserCur> curUserCurs = new HashSet<CurUserCur>(0);
@@ -43,7 +43,7 @@ public class UacUser implements java.io.Serializable {
 	private Set<Teacher> teachers = new HashSet<Teacher>(0);
 	private Set<UacUserRole> uacUserRoles = new HashSet<UacUserRole>(0);
 	private Set<CurChptLearning> curChptLearnings = new HashSet<CurChptLearning>(
-			0);
+			0);*/
 
 	// Constructors
 
@@ -76,14 +76,14 @@ public class UacUser implements java.io.Serializable {
 		this.gender = gender;
 		this.regTime = regTime;
 		this.userType = userType;
-		this.sysComNewses = sysComNewses;
+		/*this.sysComNewses = sysComNewses;
 		this.curCourseinforsForCurMgrId = curCourseinforsForCurMgrId;
 		this.curUserCurs = curUserCurs;
 		this.curCourseinforsForTeacherId = curCourseinforsForTeacherId;
 		this.sysKnowleges = sysKnowleges;
 		this.teachers = teachers;
 		this.uacUserRoles = uacUserRoles;
-		this.curChptLearnings = curChptLearnings;
+		this.curChptLearnings = curChptLearnings;*/
 	}
 
 	// Property accessors
@@ -180,7 +180,7 @@ public class UacUser implements java.io.Serializable {
 		this.userType = userType;
 	}
 
-	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "uacUser")
+	/*@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "uacUser")
 	public Set<SysComNews> getSysComNewses() {
 		return this.sysComNewses;
 	}
@@ -252,6 +252,6 @@ public class UacUser implements java.io.Serializable {
 
 	public void setCurChptLearnings(Set<CurChptLearning> curChptLearnings) {
 		this.curChptLearnings = curChptLearnings;
-	}
+	}*/
 
 }

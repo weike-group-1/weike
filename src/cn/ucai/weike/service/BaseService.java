@@ -14,7 +14,7 @@ public interface BaseService<T> {
 	
 	Result getEntity(Serializable id);
 	
-	Result getAllEntityByPage(Integer pageNo,Integer pageSize,Object...objects);
+	Result getAllEntityByPage(Integer pageNo,Integer pageSize,Object obj);
 	
 	Result getEntityCount();
 }

@@ -47,8 +47,10 @@ public class BaseDaoImpl<T> extends HibernateDaoSupport implements BaseDao<T> {
 
 	@Override
 	public T getEntity(Class clazz,Serializable id) {
-		T t=(T) this.getHibernateTemplate().get(clazz, id);
-		
+		T t=null;
+		if(clazz!=null&&id!=null){
+			t=(T) this.getHibernateTemplate().get(clazz, id);
+		}
 		return t;
 	}
 
@@ -73,6 +75,7 @@ public class BaseDaoImpl<T> extends HibernateDaoSupport implements BaseDao<T> {
 		Session session=this.getHibernateTemplate().getSessionFactory().openSession();
 		Query query=session.createQuery(hql);
 		if(objects!=null){
+			System.out.println(objects);
 			for(int i=0;i<objects.length;i++){
 				query.setParameter(i, objects[i]);
 			}
@@ -83,6 +86,16 @@ public class BaseDaoImpl<T> extends HibernateDaoSupport implements BaseDao<T> {
 		session.close();
 		
 		return list;
+	}
+
+	@Override
+	public Integer getCount(String hql) {
+		Session session=this.getHibernateTemplate().getSessionFactory().openSession();
+		Query query=session.createQuery(hql);
+		Long lg=(Long)query.uniqueResult();
+		Integer count=lg.intValue();
+		session.close();
+		return count;
 	}
 
 }

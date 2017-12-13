@@ -26,8 +26,8 @@ public class UacRole implements java.io.Serializable {
 	private String roleType;
 	private Integer disSeq;
 	private Boolean isDeactive;
-	private Set<UacRoleRight> uacRoleRights = new HashSet<UacRoleRight>(0);
-	private Set<UacUserRole> uacUserRoles = new HashSet<UacUserRole>(0);
+	/*private Set<UacRoleRight> uacRoleRights = new HashSet<UacRoleRight>(0);
+	private Set<UacUserRole> uacUserRoles = new HashSet<UacUserRole>(0);*/
 
 	// Constructors
 
@@ -44,8 +44,8 @@ public class UacRole implements java.io.Serializable {
 		this.roleType = roleType;
 		this.disSeq = disSeq;
 		this.isDeactive = isDeactive;
-		this.uacRoleRights = uacRoleRights;
-		this.uacUserRoles = uacUserRoles;
+		/*this.uacRoleRights = uacRoleRights;
+		this.uacUserRoles = uacUserRoles;*/
 	}
 
 	// Property accessors
@@ -105,7 +105,14 @@ public class UacRole implements java.io.Serializable {
 		this.isDeactive = isDeactive;
 	}
 
-	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "uacRole")
+	@Override
+	public String toString() {
+		return "UacRole [id=" + id + ", roleName=" + roleName + ", roleCode="
+				+ roleCode + ", roleType=" + roleType + ", disSeq=" + disSeq
+				+ ", isDeactive=" + isDeactive + "]";
+	}
+
+	/*@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "uacRole")
 	public Set<UacRoleRight> getUacRoleRights() {
 		return this.uacRoleRights;
 	}
@@ -121,6 +128,8 @@ public class UacRole implements java.io.Serializable {
 
 	public void setUacUserRoles(Set<UacUserRole> uacUserRoles) {
 		this.uacUserRoles = uacUserRoles;
-	}
+	}*/
+	
+	
 
 }

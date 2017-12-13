@@ -7,15 +7,15 @@ import cn.ucai.weike.utils.Result;
 
 public interface UacUserService {
 
-	void addUser(UacUser t);
+	Result addUser(UacUser t);
 	
-	void deleteUser(UacUser t);
+	Result deleteUser(UacUser t);
 	
-	void updateUser(UacUser t);
+	Result updateUser(UacUser t);
 	
 	Result getUser(Serializable id);
 	
-	Result getAllUserByPage(Integer pageNo,Integer pageSize,Object...objects);
+	Result getAllUserByPage(Integer pageNo,Integer pageSize,UacUser user);
 	
 	Result getUserCount();
 
