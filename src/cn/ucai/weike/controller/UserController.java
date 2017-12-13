@@ -63,6 +63,7 @@ public class UserController {
 	public Result doGet(UacUser user){
 		Result result=userService.getEntity(user.getId());
 		System.out.println(result);
+		System.out.println(result);
 		return result;	
 	}
 }
