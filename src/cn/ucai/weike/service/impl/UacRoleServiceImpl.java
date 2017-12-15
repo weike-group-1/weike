@@ -9,8 +9,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import cn.ucai.weike.dao.UacRoleDao;
+import cn.ucai.weike.dto.UacRoleDto;
 import cn.ucai.weike.pojo.UacRole;
 import cn.ucai.weike.service.UacRoleService;
+import cn.ucai.weike.utils.MyBeanUtils;
 import cn.ucai.weike.utils.Result;
 
 @Service("roleService")
@@ -73,9 +75,10 @@ public class UacRoleServiceImpl implements UacRoleService {
 		result.setRetMsg(false);
 		UacRole role = roleDao.getEntity(UacRole.class, id);
 		if (role != null) {
+			UacRoleDto roleDto=(UacRoleDto)MyBeanUtils.copyObjProperties(role, UacRoleDto.class);
 			result.setRetCode(0);
 			result.setRetMsg(true);
-			result.setRetData(role);
+			result.setRetData(roleDto);
 		}
 		return result;
 	}
@@ -101,8 +104,10 @@ public class UacRoleServiceImpl implements UacRoleService {
 			list = roleDao.getPageListByCondition(hql, pageNo, pageSize);
 		}
 		if (list != null) {
+			List<UacRoleDto> listDto=MyBeanUtils.copyProperties(list, UacRoleDto.class);
 			result.setRetCode(0);
-			result.setRetData(list);
+			result.setRetData(listDto);
+			result.setRetMsg(true);
 		}
 		return result;
 	}

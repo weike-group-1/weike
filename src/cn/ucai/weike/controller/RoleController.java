@@ -12,7 +12,7 @@ import cn.ucai.weike.utils.Result;
 
 @Controller
 @RequestMapping("/uacRole")
-public class roleController {
+public class RoleController {
 
 	@Resource
 	UacRoleService roleService;

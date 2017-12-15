@@ -9,8 +9,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import cn.ucai.weike.dao.UacUserDao;
+import cn.ucai.weike.dto.UacUserDto;
 import cn.ucai.weike.pojo.UacUser;
 import cn.ucai.weike.service.UacUserService;
+import cn.ucai.weike.utils.MyBeanUtils;
 import cn.ucai.weike.utils.Result;
 
 @Service("userService")
@@ -80,9 +82,10 @@ public class UacUserServiceImpl implements UacUserService {
 		result.setRetMsg(false);
 		UacUser user = userDao.getEntity(UacUser.class, id);
 		if (user != null) {
+			UacUserDto userDto=(UacUserDto)MyBeanUtils.copyObjProperties(user, UacUserDto.class);
 			result.setRetCode(0);
 			result.setRetMsg(true);
-			result.setRetData(user);
+			result.setRetData(userDto);
 		}
 		return result;
 	}
@@ -112,9 +115,10 @@ public class UacUserServiceImpl implements UacUserService {
 					pageSize);
 		}
 		if (list != null) {
+			List<UacUserDto> listDto=MyBeanUtils.copyProperties(list, UacUserDto.class);
 			result.setRetCode(0);
 			result.setRetMsg(true);
-			result.setRetData(list);
+			result.setRetData(listDto);
 		}
 		return result;
 	}
