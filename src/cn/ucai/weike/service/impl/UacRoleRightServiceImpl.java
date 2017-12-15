@@ -80,11 +80,14 @@ public class UacRoleRightServiceImpl implements UacRoleRightService {
 		Result result = new Result();
 		result.setRetCode(1001);
 		result.setRetMsg(false);
-		UacRoleRight right = roleRightDao.getEntity(UacRoleRight.class, id);
-		if (right != null) {
+		UacRoleRight roleRight = roleRightDao.getEntity(UacRoleRight.class, id);
+		if (roleRight != null) {
+			UacRoleDto roleDto=(UacRoleDto) MyBeanUtils.copyObjProperties(roleRight.getUacRole(), UacRoleDto.class);
+			UacRightDto rightDto=(UacRightDto) MyBeanUtils.copyObjProperties(roleRight.getUacRight(), UacRightDto.class);
+			UacRoleRightDto urrDto=new UacRoleRightDto(roleRight.getId(),roleDto,rightDto);
 			result.setRetCode(0);
 			result.setRetMsg(true);
-			result.setRetData(right);
+			result.setRetData(urrDto);
 		}
 		return result;
 	}
