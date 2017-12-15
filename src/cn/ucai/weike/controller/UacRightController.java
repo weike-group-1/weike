@@ -21,14 +21,14 @@ public class UacRightController {
 	@ResponseBody
 	public Result getCount(){
 		Result result=uacRightService.getEntityCount();
-		System.out.println(result);
+		
 		return result;
 	}
 	@RequestMapping("/doAdd")
 	@ResponseBody
 	public Result doAdd(UacRight right) {
 		Result result = uacRightService.addEntity(right);
-		System.out.println(result);
+		
 		return result;
 	}
 
@@ -36,7 +36,7 @@ public class UacRightController {
 	@ResponseBody
 	public Result doDelete(UacRight right) {
 		Result result = uacRightService.deleteEntity(right);
-		System.out.println(result);
+		
 		return result;
 	}
 
@@ -44,7 +44,7 @@ public class UacRightController {
 	@ResponseBody
 	public Result doUpdate(UacRight right) {
 		Result result = uacRightService.updateEntity(right);
-		System.out.println(result);
+		
 		return result;
 	}
 
@@ -53,7 +53,7 @@ public class UacRightController {
 	public Result getAllByPage(Integer pageNo, Integer pageSize,
 			UacRight right) {
 		Result result = uacRightService.getAllEntityByPage(pageNo, pageSize, right);
-		System.out.println(result);
+		
 		return result;
 	}
 	
@@ -61,7 +61,7 @@ public class UacRightController {
 	@ResponseBody
 	public Result doGet(UacRight right){
 		Result result=uacRightService.getEntity(right.getId());
-		System.out.println(result);
+		
 		return result;	
 	}
 }

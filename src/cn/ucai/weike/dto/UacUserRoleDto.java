@@ -3,27 +3,35 @@ package cn.ucai.weike.dto;
 import java.io.Serializable;
 
 
-public class UacRoleRightDto implements Serializable{
-	
+public class UacUserRoleDto implements Serializable{
+
 	private Integer id;
+	private UacUserDto uacUserDto;
 	private UacRoleDto uacRoleDto;
-	private UacRightDto uacRightDto;
 	
-	public UacRoleRightDto() {
+	public UacUserRoleDto() {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public UacRoleRightDto(Integer id,UacRoleDto uacRoleDto, UacRightDto uacRightDto) {
+	public UacUserRoleDto(Integer id, UacUserDto uacUserDto,
+			UacRoleDto uacRoleDto) {
 		super();
-		this.id=id;
+		this.id = id;
+		this.uacUserDto = uacUserDto;
 		this.uacRoleDto = uacRoleDto;
-		this.uacRightDto = uacRightDto;
 	}
+
 	public Integer getId() {
 		return id;
 	}
 	public void setId(Integer id) {
 		this.id = id;
+	}
+	public UacUserDto getUacUserDto() {
+		return uacUserDto;
+	}
+	public void setUacUserDto(UacUserDto uacUserDto) {
+		this.uacUserDto = uacUserDto;
 	}
 	public UacRoleDto getUacRoleDto() {
 		return uacRoleDto;
@@ -31,15 +39,6 @@ public class UacRoleRightDto implements Serializable{
 	public void setUacRoleDto(UacRoleDto uacRoleDto) {
 		this.uacRoleDto = uacRoleDto;
 	}
-	public UacRightDto getUacRightDto() {
-		return uacRightDto;
-	}
-	public void setUacRightDto(UacRightDto uacRightDto) {
-		this.uacRightDto = uacRightDto;
-	}
 	
 	
-	
-	
-
 }

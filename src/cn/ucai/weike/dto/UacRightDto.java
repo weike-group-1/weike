@@ -1,6 +1,8 @@
 package cn.ucai.weike.dto;
 
-public class UacRightDto {
+import java.io.Serializable;
+
+public class UacRightDto implements Serializable{
 
 	private Integer id;
 	private String code;

@@ -1,6 +1,8 @@
 package cn.ucai.weike.dto;
 
-public class UacRoleDto {
+import java.io.Serializable;
+
+public class UacRoleDto implements Serializable{
 
 	private Integer id;
 	private String roleName;

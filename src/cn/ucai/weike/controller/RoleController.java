@@ -21,7 +21,7 @@ public class RoleController {
 	@ResponseBody
 	public Result doAdd(UacRole role){
 		Result result=roleService.addEntity(role);
-		System.out.println(result);
+		
 		return result;
 	}
 	
@@ -29,7 +29,7 @@ public class RoleController {
 	@ResponseBody
 	public Result doUpdate(UacRole role){
 		Result result=roleService.updateEntity(role);
-		System.out.println(result);
+		
 		return result;
 	}
 	
@@ -37,7 +37,7 @@ public class RoleController {
 	@ResponseBody
 	public Result doDelete(UacRole role){
 		Result result=roleService.deleteEntity(role);
-		System.out.println(result);
+		
 		return result;
 	}
 	
@@ -45,7 +45,7 @@ public class RoleController {
 	@ResponseBody
 	public Result doGet(UacRole role){
 		Result result=roleService.getEntity(role.getId());
-		System.out.println(result);
+		
 		return result;
 	}
 	
@@ -53,7 +53,7 @@ public class RoleController {
 	@ResponseBody
 	public Result getCount(){
 		Result result=roleService.getEntityCount();
-		System.out.println(result);
+		
 		return result;
 	}
 	

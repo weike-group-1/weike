@@ -1,10 +1,11 @@
 package cn.ucai.weike.dto;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 
 import cn.ucai.weike.pojo.SysDepartment;
 
-public class UacUserDto {
+public class UacUserDto implements Serializable{
 
 	private Integer id;
 	private String account;

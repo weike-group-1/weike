@@ -21,7 +21,7 @@ public class UserController {
 	@ResponseBody
 	public Result getCount() {
 		Result result = userService.getEntityCount();
-		System.out.println(result);
+		
 		return result;
 	}
 
@@ -29,7 +29,7 @@ public class UserController {
 	@ResponseBody
 	public Result doAdd(UacUser user) {
 		Result result = userService.addEntity(user);
-		System.out.println(result);
+		
 		return result;
 	}
 
@@ -37,7 +37,7 @@ public class UserController {
 	@ResponseBody
 	public Result doDelete(UacUser user) {
 		Result result = userService.deleteEntity(user);
-		System.out.println(result);
+		
 		return result;
 	}
 
@@ -45,7 +45,7 @@ public class UserController {
 	@ResponseBody
 	public Result doUpdate(UacUser user) {
 		Result result = userService.updateEntity(user);
-		System.out.println(result);
+		
 		return result;
 	}
 
@@ -54,7 +54,7 @@ public class UserController {
 	public Result getAllByPage(Integer pageNo, Integer pageSize,
 			UacUser user) {
 		Result result = userService.getAllEntityByPage(pageNo, pageSize, user);
-		System.out.println(result);
+		
 		return result;
 	}
 	
@@ -62,7 +62,7 @@ public class UserController {
 	@ResponseBody
 	public Result doGet(UacUser user){
 		Result result=userService.getEntity(user.getId());
-		System.out.println(result);
+		
 		return result;	
 	}
 }

@@ -55,7 +55,7 @@ public class RoleRightController {
 	@ResponseBody
 	public Result getCount() {
 		Result result = roleRightService.getEntityCount();
-		System.out.println(result);
+		
 		return result;
 	}
 
@@ -64,7 +64,7 @@ public class RoleRightController {
 	public Result doAdd(Integer uacRoleId, Integer uacRightId) {
 		UacRoleRight urr = this.setUacRoleRight(uacRoleId,uacRightId);
 		Result result = roleRightService.addEntity(urr);
-		System.out.println(result);
+		
 		return result;
 	}
 
@@ -72,15 +72,17 @@ public class RoleRightController {
 	@ResponseBody
 	public Result doDelete(UacRoleRight urr) {
 		Result result = roleRightService.deleteEntity(urr);
-		System.out.println(result);
+		
 		return result;
 	}
 
 	@RequestMapping("/doUpdate")
 	@ResponseBody
-	public Result doUpdate(UacRoleRight urr) {
+	public Result doUpdate(Integer id,Integer uacRoleId, Integer uacRightId) {
+		UacRoleRight urr=this.setUacRoleRight(uacRoleId, uacRightId);
+		urr.setId(id);
 		Result result = roleRightService.updateEntity(urr);
-		System.out.println(result);
+		
 		return result;
 	}
 
@@ -88,10 +90,9 @@ public class RoleRightController {
 	@ResponseBody
 	public Result getAllByPage(Integer pageNo, Integer pageSize,
 			Integer uacRoleId, Integer uacRightId) {
-		System.out.println("进来了");
 		UacRoleRight urr = this.setUacRoleRight(uacRoleId,uacRightId);
 		Result result = roleRightService.getAllEntityByPage(pageNo, pageSize,urr);
-		System.out.println(result);
+		
 		return result;
 	}
 
@@ -99,7 +100,7 @@ public class RoleRightController {
 	@ResponseBody
 	public Result doGet(UacRoleRight urr) {
 		Result result = roleRightService.getEntity(urr.getId());
-		System.out.println(result);
+		
 		return result;
 	}
 
